@@ -1,7 +1,7 @@
 module RVim
   module Curses
 
-    class Window
+    class Screen
     end
 
   end
