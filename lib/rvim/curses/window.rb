@@ -1,5 +1,5 @@
 module RVim
-  module Editor
+  module Curses
 
     class Window
     end
