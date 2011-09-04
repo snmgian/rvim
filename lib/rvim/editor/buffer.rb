@@ -2,9 +2,12 @@ module RVim
   module Editor
 
     class Buffer
-      def initialize
-        @data = nil
-        @name = nil
+
+      attr_accessor :data
+
+      def initialize(name = nil, data = '')
+        @name = name
+        @data = data
       end
     end
 

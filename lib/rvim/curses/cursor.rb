@@ -9,10 +9,19 @@ module RVim
       Visibility.new :visible, 1
       Visibility.new :very_visible, 2
 
+      attr_accessor :x, :y
+
       def initialize
-        @x = nil
-        @y = nil
+        @x = 0
+        @y = 0
         @visibility = nil
+      end
+
+      def position=(coords)
+        $log.debug "coords: #{coords.inspect}"
+        @x = coords[0]
+        @y = coords[1]
+        ::Curses.setpos(@y, @x)
       end
     end
 
